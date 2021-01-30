@@ -1,0 +1,41 @@
+*{
+    margin-top: 0;
+    padding: 0;
+}
+.container .row .contenedor-form{
+    width: 70%;
+    margin: 50px auto ;
+    box-shadow: 1px 5px 10px #cccccc;
+    
+    
+}
+.container .row .contenedor-form form{
+
+
+}
+.container .row .contenedor-form input[type="text"],
+.container .row .contenedor-form input[type="date"],
+.container .row .contenedor-form input[type="number"]
+{
+    width: 80%;
+    margin: 10px 10%;    
+    border: none;
+    border-bottom: 1px solid #000000;
+    border-radius: 5px 10px 5px 2px;
+    padding: 3px 20px;
+}
+.container .row .contenedor-form input[type="submit"]{
+    width: 20%;
+    margin: 5px 40%;
+    margin-bottom: 20px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+}
+.container .row .contenedor-form input[type="submit"]:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
