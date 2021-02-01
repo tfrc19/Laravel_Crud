@@ -15,8 +15,8 @@ class ProductosController extends Controller
     public function index()
     {
         //
-
-        return "Estas en la pagina de Inicio";
+        $productos = Producto::all();
+        return view("productos.index",compact("productos"));
     }
 
     /**
@@ -50,7 +50,8 @@ class ProductosController extends Controller
         $producto = $producto->save();
 
         if($producto==1){
-            return view('productos.create');
+            //return view('productos.create');
+            return redirect("/productos");
         }
         else{
             return "No se pudo insertar correctamente";
@@ -66,6 +67,8 @@ class ProductosController extends Controller
     public function show($id)
     {
         //
+        $producto = Producto::findOrFail($id);
+        return view('productos.show',compact("producto"));
     }
 
     /**
@@ -77,6 +80,8 @@ class ProductosController extends Controller
     public function edit($id)
     {
         //
+        $producto = Producto::findOrFail($id);
+        return view('productos.edit',compact("producto"));
     }
 
     /**
@@ -89,8 +94,16 @@ class ProductosController extends Controller
     public function update(Request $request, $id)
     {
         //
-
-        return view('productos.update');
+       
+        $producto = Producto::findOrFail($id);
+        $producto = $producto->update($request->all());
+        /*$producto->NombreArticulo=$request->NombreArticulo;
+        $producto->Seccion=$request->Seccion;
+        $producto->Precio=$request->Precio;
+        $producto->Fecha=$request->Fecha;
+        $producto->PaisOrigen=$request->PaisOrigen;
+        $producto->save();*/
+         return redirect('/productos');
     }
 
     /**
@@ -102,7 +115,9 @@ class ProductosController extends Controller
     public function destroy($id)
     {
         //
-
-        return view('productos.delete');
+        $producto = Producto::findOrFail($id);
+        $producto->delete();
+        return redirect("/productos");
+        //return view('productos.delete');
     }
 }

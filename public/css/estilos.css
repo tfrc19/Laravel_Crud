@@ -39,3 +39,45 @@
     color: #000000;
     background-color: #ffffff;
 }
+.cabecera{
+    width: 100%;
+    overflow: hidden;
+}
+.cabecera .texto{
+    float: left;
+    width: 86%;
+    margin:0px auto;
+    margin-left: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.cabecera .texto h3{
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #536340;
+}
+
+.cabecera .imagen{
+    float: right;
+    width: 7%;
+    margin-right: 60px;
+}
+.pie{
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    margin-bottom: 10px;
+    background-color: #000000;
+}
+.pie .row p{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 0px;
+    margin-top: 2px;
+}
+.contenido-table .table .delete{
+    color: red;
+}
